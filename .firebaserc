@@ -1,0 +1,41 @@
+{
+  "projects": {
+    "default": "shapeshift-51b8f",
+    "master": "shapeshift-51b8f",
+    "prod": "shapeshift-51b8f"
+  },
+  "ci": {
+    "createConfig": {
+      "master": {
+        "env": "production",
+        "firebase": {
+          "apiKey": "AIzaSyB2okNG5zSuhDxuEPGCU1QO5uoJuCx3aX0",
+          "authDomain": "shapeshift-51b8f.firebaseapp.com",
+          "databaseURL": "https://shapeshift-51b8f.firebaseio.com",
+          "projectId": "shapeshift-51b8f",
+          "storageBucket": "shapeshift-51b8f.appspot.com"
+        },
+        "reduxFirebase": {
+          "userProfile": "users",
+          "enableLogging": false,
+          "updateProfileOnLogin": false
+        }
+      },
+      "prod": {
+        "env": "production",
+        "firebase": {
+          "apiKey": "AIzaSyB2okNG5zSuhDxuEPGCU1QO5uoJuCx3aX0",
+          "authDomain": "shapeshift-51b8f.firebaseapp.com",
+          "databaseURL": "https://shapeshift-51b8f.firebaseio.com",
+          "projectId": "shapeshift-51b8f",
+          "storageBucket": "shapeshift-51b8f.appspot.com"
+        },
+        "reduxFirebase": {
+          "userProfile": "users",
+          "enableLogging": false,
+          "updateProfileOnLogin": false
+        }
+      }
+    }
+  }
+}
