@@ -1,0 +1,53 @@
+@import '../../scss/base';
+.addresslist-component {
+  .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @include v-center(absolute);
+    left: 24px;
+    width: 75%;
+  }
+  .main-container {
+    padding: 0 !important;
+    span {
+      font-size: 12px;
+      display: block;
+    }
+  }
+  .expansion-panel-details {
+    padding: 12px;
+    span {
+      font-size: 14px;
+      strong {
+        font-weight: normal;
+        color: darken($muted-text, 15%);
+      }
+    }
+  }
+  .card-header {
+      position: relative;
+      .add-address-button {
+        @include v-center(absolute);
+        right: 24px;
+        @media only screen and (max-width: 450px) {
+          right: 12px;
+        }
+        span {
+            color: $muted-text;
+
+        }
+      }
+      .add-address-button:hover {
+        span {
+            color: black;
+            transition: ease-in-out 750ms;
+        }
+      }
+  }
+  
+}
+
+.dialog-content {
+    background:linear-gradient(to top right, white, lighten($lt-grey, 2%));
+    padding-top: 24px !important;
+  }

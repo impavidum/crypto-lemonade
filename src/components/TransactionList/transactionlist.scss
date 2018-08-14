@@ -1,0 +1,44 @@
+@import '../../scss/base';
+
+.transactionList-component {
+    .truncate {
+        overflow: hidden;
+  text-overflow: ellipsis;
+   
+    }
+   .expansion-panel-details{
+    display: block;
+    padding: 24px;
+    span {
+      font-size: 14px;
+      display: block;
+      strong {
+        font-weight: normal;
+        color: darken($muted-text, 15%);
+      }
+    }
+   }
+
+   .card-header {
+    position: relative;
+    .refresh-button {
+      @include v-center(absolute);
+      right: 24px;
+      @media only screen and (max-width: 450px) {
+        right: 12px;
+      }
+        span {
+            color: $muted-text;
+
+        }
+      }
+      .add-address-button:hover {
+        span {
+            color: black;
+            transition: ease-in-out 750ms;
+        }
+      }
+}
+        
+   
+}

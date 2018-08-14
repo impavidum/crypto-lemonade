@@ -8,14 +8,16 @@
  *          you edit them, they are not updated again.
  */
 /* Populated by react-webpack-redux:reducer */
-
-import {reducer as formReducer} from 'redux-form'
-import {combineReducers} from 'redux';
+import { reducer as formReducer } from 'redux-form';
+import colors from '../reducers/colors.js';
+import bitcoin from '../reducers/bitcoin.js';
+import { combineReducers } from 'redux';
 import user from '../reducers/user.js';
-
 const reducers = {
-    user,
-    form: formReducer
+  user,
+  form: formReducer,
+  bitcoin,
+  colors
 };
 const combined = combineReducers(reducers);
 module.exports = combined;

@@ -1,0 +1,17 @@
+@import '../../scss/base';
+.footer-component {
+  height: 150px;
+  background: linear-gradient(to top right, white, lighten($lt-grey, 1%));
+  position: relative;
+  h1 {
+    color: $muted-text;
+    font-weight: normal;
+    font-size: 14px;
+    @include centerer(absolute);
+  }
+  a {
+    color: $muted-text;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}

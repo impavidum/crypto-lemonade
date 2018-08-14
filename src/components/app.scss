@@ -2,5 +2,25 @@
 
 #app {
     background-color: $background;
-    font-family: 'Open Sans', sans-serif;
+    
+    .main-container {
+        max-width: 1500px;
+        width: 100%;
+        margin: auto;
+        padding: 30px;
+        @media only screen and (max-width: 450px) {
+            padding: 10px;
+          }
+        padding-bottom: 60px; 
+    }
 }
+
+body, html {
+    margin: 0;
+    h1, h2, p, span {font-family: 'Open Sans', sans-serif !important;}
+}
+
+// .expansion-panel {
+//     box-shadow: 0 0 50px rgba(0,0,0, .1) !important;
+// }
+

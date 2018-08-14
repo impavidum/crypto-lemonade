@@ -1,11 +1,14 @@
 import React from 'react';
 import './app.scss';
 
-import {AppBar,Toolbar,Typography, Grid} from '@material-ui/core';
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+import {Grid} from '@material-ui/core';
 
 // Components
 import Nav from './Nav/Nav';
+import Footer from './Footer/Footer';
+import AddressList from './AddressList/AddressList';
+import TransactionList from './TransactionList/TransactionList';
+import BitcoinStats from './BitcoinStats/BitcoinStats';
 
 class AppComponent extends React.Component {
 
@@ -15,22 +18,27 @@ class AppComponent extends React.Component {
   }
 
   render() {
+    const {actions, bitcoin, colors} = this.props;
     return (
       <div className="app-component">
-        <div>
+          <Nav/>
+          <Grid container className="main-container" spacing={24}>
 
-          <Grid container spacing={24} style={{ maxWidth: 1500 }}>
-            <Grid item md={12} lg={6}>
-              {/* <BlockchainStats /> */}
-              {/* <ExchangeRates /> */}
-              Main app here..
+          <Grid item xs={12}>
+          <BitcoinStats getBitcoinStats={actions.getBitcoinStats} bitcoinStats={bitcoin.bitcoinStats} colors={colors}/>
+
             </Grid>
-            <Grid item md={12} lg={6}>
-              
+            <Grid item xs={12} lg={6}>
+
+              <TransactionList bitcoinAddressData={bitcoin.bitcoinAddressData} getBitcoinAddresses={actions.getBitcoinAddresses}/>
+
+            </Grid>
+            <Grid item xs={12} lg={6}>
+            <AddressList addBitcoinAddress={actions.addBitcoinAddress} getBitcoinAddresses={actions.getBitcoinAddresses} bitcoinAddressData={bitcoin.bitcoinAddressData}/>
+
             </Grid>
           </Grid>
-
-        </div>
+          <Footer/>
       </div>
     );
   }

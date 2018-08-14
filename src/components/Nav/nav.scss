@@ -1,0 +1,34 @@
+@import '../../scss/base';
+
+.nav-component {
+    header {
+        background:linear-gradient(to bottom right, white, $lt-grey);
+        box-shadow: none;
+        height: 80px;
+        .nav-container {
+            max-width: 1500px;
+            width: 100%;
+            height: 80px;
+            margin: auto;
+            position: relative;
+            // padding: 30px;
+            
+            img {
+                @include v-center(absolute);
+                left: 50px;
+                @media only screen and (max-width: 450px) {
+                left: 30px;
+                }
+            }
+            h2 {
+                @include v-center(absolute);
+                left: 95px;
+                @media only screen and (max-width: 450px) {
+                    left: 75px;
+                    }
+            }
+        }
+    }
+}
+
+// mxJ2KgoWkM2ecoY8moFoAMCi8cHxK4S1S2

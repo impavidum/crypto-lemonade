@@ -9,18 +9,21 @@ import {Router, browserHistory, Route, IndexRoute} from 'react-router';
 import routes from './routes.js';
 import App from './containers/App.js';
 
+// Format JS
+import {IntlProvider} from 'react-intl';
 
 const store = configureStore();
 
+
 ReactDOM.render(
+  <IntlProvider locale="en">
   <Provider store={store}>
     <Router history={browserHistory}>
       
       <Route path="/" component={App}/>
     </Router>
-  </Provider>, 
-
- document.getElementById('app'));
+  </Provider>
+  </IntlProvider>, document.getElementById('app'));
 
 
 if (module.hot) {
